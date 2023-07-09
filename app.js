@@ -8,7 +8,7 @@ const productRoutes = require('./api/routes/products')
 const orderRoutes = require('./api/routes/orders')
 const userRoutes = require('./api/routes/user');
 
-mongoose.connect('mongodb+srv://sud123:' + process.env.MONGO_ATLAS_PW + '@node-rest-shop.dzppkdp.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://'+process.env.MONGO_ATLAS_UN+':' + process.env.MONGO_ATLAS_PW + '@node-rest-shop.dzppkdp.mongodb.net/?retryWrites=true&w=majority')
 mongoose.Promise = global.Promise;
 //Log the requests with morgan (The logging package for nodejs)
 app.use(morgan("dev"));
